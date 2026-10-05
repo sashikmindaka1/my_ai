@@ -1,10 +1,13 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+import HeroPage from '../components/HeroPage';
+
 
 export default function Homepage() {
   return (
     <div>
-      <Navbar />
+      <HeroPage />
+      
+      
     </div>
   )
 }

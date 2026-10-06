@@ -33,7 +33,7 @@ export default function Navbar() {
             
             {/* hide name when close slidebar */}
             <p className={`text-2xl text-amber-50 font-bold whitespace-nowrap transition-all duration-300 ${!isOpen ? 'hidden' : 'block'}`}>
-              sashik ai
+              Sashik AI
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
 
         {/* Tagline hide*/}
         <p className={`text-amber-50/70 text-[10px] uppercase tracking-widest ml-[3.5rem] mt-1 whitespace-nowrap transition-all duration-300 ${!isOpen ? 'hidden' : 'block'}`}>
-          Think . Learn . Creative
+          Think . Learn . Creative10D
         </p>
       </div>
 

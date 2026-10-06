@@ -23,7 +23,7 @@ export default function Heropage() {
         <input 
           type="text" 
           placeholder="Type anything..." 
-          className="w-170 h-17 mt-15 bg-[#111827] text-white placeholder-gray-400 px-5 py-4 rounded-full border border-slate-700 focus:outline-none focus:border-b-blue-900 focus:ring-1 focus:ring-blue-900 shadow-lg transition-all duration-300" 
+          className="w-170 h-17 mt-15 bg-[#111827] text-white placeholder-gray-400 px-5 py-4 border-2 rounded-3xl border-slate-700 focus:outline-none focus:border-b-blue-900 focus:ring-1 focus:ring-blue-900 shadow-lg transition-all duration-300" 
 />
       </div>
       <div>

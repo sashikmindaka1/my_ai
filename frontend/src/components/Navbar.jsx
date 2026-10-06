@@ -3,7 +3,7 @@ import chatgpt from '../assets/chatgpt.jpg';
 import arrowimg from '../assets/arrow1.jpg';
 
 const menuList = [
-  { title: 'New Chat', icon: '✎', url: 'https://www.sashikmindaka.dev/' }, 
+  { title: 'New Chat', icon: '✎', url: '/' }, 
   { title: 'Explore', icon: '◉', url: '/explore' },
   { title: 'Library', icon: '▣', url: '/library' },
   { title: 'Settings', icon: '⚙', url: '/settings' }
@@ -55,7 +55,6 @@ export default function Navbar() {
         {menuList.map((menu, index) => (
           <a 
             href={menu.url}
-            target='_blank'
             rel="noopener noreferrer"
             key={index} 
             className="flex items-center p-3 text-amber-50 hover:bg-gray-700 rounded-lg transition-colors w-full"

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function HeroPage() {
   const [messages, setMessages] = useState([]); // Store chat history
@@ -69,15 +71,24 @@ export default function HeroPage() {
               msg.role === 'user' ? 'justify-end' : 'justify-start'
             }`}
           >
-            <div
-              className={`p-4 rounded-2xl max-w-xl text-sm md:text-base ${
-                msg.role === 'user'
-                  ? 'bg-blue-600 text-white rounded-br-sm shadow-md'
-                  : 'bg-[#0f172a] border border-slate-800 text-gray-200'
-              }`}
-            >
-              <p>{msg.content}</p>
-            </div>
+           <div
+  className={`p-4 rounded-2xl max-w-2xl text-sm md:text-base overflow-x-auto ${
+    msg.role === 'user'
+      ? 'bg-blue-600 text-white rounded-br-sm shadow-md'
+      : 'bg-[#0f172a] border border-slate-800 text-gray-200'
+  }`}
+   >
+
+     {msg.role === 'user' ? (
+      <p>{msg.content}</p>
+     ) : (
+       <div className="prose prose-invert max-w-none">
+         <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {msg.content}
+         </ReactMarkdown>
+      </div>
+     )}
+    </div> 
           </div>
         ))}
 

@@ -1,7 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-const Groq = require('groq-sdk');
+// import db details
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import Groq from 'groq-sdk';
+import connectDB from './config/db.js';
+
+
+dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -69,4 +75,13 @@ app.listen(PORT, () => {
   console.log(` Server running on port ${PORT}`);
 }).on('error', (err) => {
   console.error(' Server startup error:', err);
+});
+
+// test route
+app.get('/', (req, res) => {
+  res.send('api is running and DB is connected with express v5 and mongoose v9!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

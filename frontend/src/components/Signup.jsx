@@ -27,7 +27,7 @@ export default function Signup() {
       {!user ? (
         <> {/* Used a fragment <> instead of div to fix the tag mismatch error */}
           <p className='text-6xl text-amber-50 text-center pt-30 font-bold'>
-            Login or Sign up
+            create new account
           </p>
 
           <div className='flex items-center justify-center mt-15'>
@@ -36,7 +36,25 @@ export default function Signup() {
               placeholder='enter email adddress' 
               className='w-100 h-14 bg-[#111827] text-white placeholder-gray-400 px-5 py-4 rounded-full border border-slate-700 focus:outline-none focus:border-b-blue-900 focus:ring-1 focus:ring-blue-900 shadow-lg transition-all duration-300 ' 
             />
+            
+            
           </div>
+          <div className='flex items-center justify-center mt-5'>
+              <input 
+              type="text" 
+              placeholder='enter Password' 
+              className='w-100 h-14 bg-[#111827] text-white placeholder-gray-400 px-5 py-4 rounded-full border border-slate-700 focus:outline-none focus:border-b-blue-900 focus:ring-1 focus:ring-blue-900 shadow-lg transition-all duration-300 ' 
+            />
+
+            </div>
+            <div className='flex items-center justify-center mt-5'>
+              <input 
+              type="text" 
+              placeholder='enter your name' 
+              className='w-100 h-14 bg-[#111827] text-white placeholder-gray-400 px-5 py-4 rounded-full border border-slate-700 focus:outline-none focus:border-b-blue-900 focus:ring-1 focus:ring-blue-900 shadow-lg transition-all duration-300 ' 
+            />
+
+            </div>
 
           <div className='flex justify-center items-center pt-5'>
             <button className='text-2xl text-black bg-amber-50 border-2 border-r-2 rounded-full p-3 px-38 hover:bg-gray-600 hover:border-gray-600 '>

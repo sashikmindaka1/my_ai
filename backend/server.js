@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import Groq from 'groq-sdk';
 import connectDB from './config/db.js';
+import authRoutes from "./routes/authRoutes.js";
 
 
 dotenv.config();
@@ -21,6 +22,8 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+app.use("/api/auth", authRoutes);
 
 // Initialize Groq SDK using your API key from the .env file
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });

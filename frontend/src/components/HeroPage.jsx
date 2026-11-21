@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useNavigate } from "react-router-dom";
 
 export default function HeroPage() {
   const [messages, setMessages] = useState([]); // Store chat history
   const [input, setInput] = useState(''); // The typed text in input box
-  const [loading, setLoading] = useState(false); // When AI is replying, show thinking text
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // When AI is replying, show thinking text
 
+  const gotoSignup = () => {
+    navigate("/signup");
+  };
   // Function to handle sending the message
   const handleSend = async () => {
     if (!input.trim()) return; // If input is empty, do nothing
@@ -128,6 +133,16 @@ export default function HeroPage() {
           </button>
 
         </div>
+      </div>
+
+      <div>
+        
+        <button className="fixed top-10 right-10 bg-amber-50 text-black font-bold px-4 py-2 rounded-lg shadow hover:bg-blue-950 hover:text-amber-50 "
+        onClick={gotoSignup}
+        >
+          login
+          
+        </button>
       </div>
 
     </div>

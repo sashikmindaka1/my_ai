@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  const goBackHome=() => {
+    navigate("/");
+  }
 
   const handleSuccess = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential);
@@ -76,6 +82,12 @@ export default function Signup() {
           </button>
         </div>
       )}
+
+      <button className='fixed top-10 right-10 bg-amber-50 text-black font-bold px-4 py-2 rounded-lg shadow hover:bg-blue-950 hover:text-amber-50 '
+      onClick={goBackHome}
+      >
+        back
+      </button>
       
     </div>
   )
